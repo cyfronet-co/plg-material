@@ -79,6 +79,20 @@
 
 
 
+/* Hide dark/light images on light/dark theme */
+[data-md-color-scheme="plg-material-light"] img[src*="--dark"],
+[data-md-color-scheme="plg-material-dark"] img[src*="--light"] {
+  display: none;
+}
+/* Hide dark/light images on dark/light theme */
+[data-md-color-scheme="plg-material-light"] img[src*="--light"],
+[data-md-color-scheme="plg-material-dark"] img[src*="--dark"] {
+  display: block;
+}
+
+
+
+
 /* html-tags styling */
 .md-typeset h1 {
   color: var(--md-primary-bg-color);
