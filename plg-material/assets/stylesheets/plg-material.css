@@ -93,6 +93,18 @@
 
 
 
+/* Remove scrollbar from nav & toc */
+.md-sidebar__scrollwrap {
+  -ms-overflow-style: none; /* Internet Explorer, Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.md-sidebar__scrollwrap::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+
+
+
 /* html-tags styling */
 .md-typeset h1 {
   color: var(--md-primary-bg-color);
