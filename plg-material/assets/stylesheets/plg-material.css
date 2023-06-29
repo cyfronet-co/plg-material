@@ -289,10 +289,13 @@
     background-color: var(--plg-nav-active-color);
   }
   /* Active nav-items styling */
-  .md-nav.md-nav--primary > ul .md-nav__item--active > label {
+  .md-nav.md-nav--primary > ul .md-nav__item--active > label, /* nested items */
+  .md-nav.md-nav--primary > ul > .md-nav__item--active > a /* not nested items */
+  {
     color: var(--plg-nav-active-color);
   }
-  .md-sidebar--primary .md-nav__link--active {
+  /* Add background to not nested items */
+  .md-sidebar--primary ul ul .md-nav__link--active {
     background-color: var(--plg-nav-current-color);
   }
   /* Replace nav title with margin */
