@@ -11,12 +11,15 @@ To install **plg-material** just follow the instruction below.
 3. Add the following lines to `mkdocs.yml`:
     ```
     theme:
-      name: plg-material-main
+      name: material
+      custom_dir: plg-material-main
+      palette:
+        scheme: plg-material-light
 
     extra_css:
       - assets/stylesheets/plg-material.css
     ```
-    We also recommend renaming the unzipped directory to `plg-material` for the ease of naming.
+    We also recommend changing the unzipped directory name and `custom_dir` value to `plg-material` for the ease of naming.
 4. Configure other options in your `mkdocs.yml`. You may find next section useful if you are looking for addition features intruduced in our custom theme.
 
 # **Features**
@@ -38,7 +41,8 @@ In our theme we have defined two custom schemes:
 To use either one in your project you have to define it in your `theme.palette` option, e.g.:
 ```
 theme:
-  palette: plg-material-light
+  palette: 
+    scheme: plg-material-light
 ```
 However, if you would like to switch between the modes you have to add the following code to your `mkdocs.yml`:
 ```
