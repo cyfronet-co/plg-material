@@ -408,12 +408,25 @@
   .md-nav.md-nav--primary > ul > .md-nav__item:first-child .md-nav__link {
     margin-top: var(--plg-header-size) !important;
   }
+  /* Nav-tabs index label */
+  .md-sidebar--primary .md-nav--lifted > .md-nav__list > .md-nav__item--active > .md-nav__link {
+    padding: 12px 12px 12px 16px;
+    margin-top: var(--plg-header-size);
+    background: none;
+    font-size: 16px;
+    color: var(--plg-nav-active-color);
+    box-shadow: none;
+  }
+  /* Highlight active section in nav-tabs */
+  .md-tabs__link.md-tabs__link--active {
+    font-weight: 700;
+  }
 
 
-
+  
 
   /* Shift content when navigation is fixed */
-  .md-main, .md-footer, .md-header {
+  .md-main, .md-footer, .md-header, .md-tabs {
     padding-left: var(--plg-nav-size);
   }
 
