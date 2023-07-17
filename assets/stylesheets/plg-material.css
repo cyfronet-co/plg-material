@@ -61,6 +61,7 @@
 
   --plg-nav-bg-color:         var(--slate-900);
   --plg-nav-title-bg-color:   var(--slate-800);
+  --plg-nav-source-bg-color:  var(--slate-700);
   --plg-typeset-nav-color:    var(--white);
   --plg-nav-active-color:     var(--emerald-400);
   --plg-nav-hover-color:      var(--emerald-100);
@@ -98,6 +99,7 @@
 
   --plg-nav-bg-color:         var(--slate-900);
   --plg-nav-title-bg-color:   var(--slate-800);
+  --plg-nav-source-bg-color:  var(--slate-700);
   --plg-typeset-nav-color:    var(--slate-300);
   --plg-nav-active-color:     var(--emerald-400);
   --plg-nav-hover-color:      var(--emerald-100);
@@ -157,6 +159,11 @@
   width: var(--plg-nav-size);
   background-color: var(--plg-nav-bg-color);
   color: var(--md-primary-bg-color);
+}
+/* Nav-source styling */
+.md-nav__source {
+  background-color: var(--plg-nav-source-bg-color);
+  color: white;
 }
 
 
@@ -423,7 +430,7 @@
   }
 
 
-  
+
 
   /* Shift content when navigation is fixed */
   .md-main, .md-footer, .md-header, .md-tabs {
