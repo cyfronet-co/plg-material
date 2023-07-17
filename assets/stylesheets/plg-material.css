@@ -67,6 +67,7 @@
   --plg-nav-active-color:             var(--emerald-400);
   --plg-nav-hover-color:              var(--emerald-100);
   --plg-nav-current-color:            var(--black--60);
+  --plg-top-button-bg-color:          var(--slate-100);
 }
 
 /* Dark-mode scheme */
@@ -106,6 +107,7 @@
   --plg-nav-active-color:             var(--emerald-400);
   --plg-nav-hover-color:              var(--emerald-100);
   --plg-nav-current-color:            var(--black--60);
+  --plg-top-button-bg-color:          var(--slate-800);
 }
 
 
@@ -259,6 +261,15 @@
 }
 .md-typeset .warning > .admonition-title {
   background-color: var(--plg-admonition-title-bg-color--warning);
+}
+/* Scroll-to-top button */
+.md-top.md-icon {
+  background-color: var(--plg-top-button-bg-color);
+  color: inherit;
+  &:focus, &:hover {
+    background-color: var(--md-typeset-a-color);
+    color: var(--white);
+  }
 }
 
 
