@@ -20,9 +20,14 @@ To install **plg-material** just follow the instruction below.
       - assets/stylesheets/plg-material.css
     ```
     We also recommend changing the unzipped directory name and `custom_dir` value to `plg-material` for the ease of naming.
-4. Configure other options in your `mkdocs.yml`. You may find next section useful if you are looking for addition features intruduced in our custom theme.
+4. Configure other options in your `mkdocs.yml`. You may find next section useful if you are looking for additional features intruduced in our custom theme.
 
 # **Features**
+## Theme features
+For the time being, our theme provides styling for the following theme features:
+- `navigation.top`
+- `navigation.tabs`
+
 ## **PLGrid favicon & logo**
 To add PLGrid favicon or logo in header in your page you have to define it in your theme:
 ```
