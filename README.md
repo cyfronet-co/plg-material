@@ -8,18 +8,20 @@ To install **plg-material** just follow the instruction below.
 
 1. Download the project as a ZIP package.
 2. Unzip the package in your MkDocs project.
+> **Note**
+> For the ease of naming, we recommend changing the unzipped directory name to `plg-material` since names of packages downloaded from GitHub consists of both project name and downloaded branch, e.g. `plgrid-material-main`.
+> We use `plg-material` name in the examples presented below.
 3. Add the following lines to `mkdocs.yml`:
     ```
     theme:
       name: material
-      custom_dir: plg-material-main
+      custom_dir: plg-material
       palette:
         scheme: plg-material-light
 
     extra_css:
       - assets/stylesheets/plg-material.css
     ```
-    We also recommend changing the unzipped directory name and `custom_dir` value to `plg-material` for the ease of naming.
 4. Configure other options in your `mkdocs.yml`. You may find next section useful if you are looking for additional features intruduced in our custom theme.
 
 # **Features**
