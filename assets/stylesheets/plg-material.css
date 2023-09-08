@@ -319,6 +319,7 @@
     font-weight: 700;
     color: var(--plg-typeset-nav-color);
   }
+  .md-nav--primary .md-nav__link:focus,
   .md-nav--primary .md-nav__link:hover {
     color: var(--plg-nav-hover-color);
   }
@@ -458,6 +459,7 @@
     font-size: 14px;
     font-weight: 700;
   }
+  .md-sidebar--primary .md-nav__link:focus,
   .md-sidebar--primary .md-nav__link:hover {
     color: var(--plg-nav-hover-color);
   }
