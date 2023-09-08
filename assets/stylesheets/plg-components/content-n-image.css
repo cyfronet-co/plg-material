@@ -1,0 +1,21 @@
+/* Wrapper classes to display image next to or above (on mobile) the content in responsive layout */
+.plg-content-n-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+}
+
+/* Image styling */
+.plg-content-n-image img {
+  width: 328px;
+}
+
+@media screen and (max-width: 1024px) {
+  /* Show content & image in column on mobile */
+  .plg-content-n-image {
+    flex-direction: column !important;
+    align-items: start;
+  }
+}
