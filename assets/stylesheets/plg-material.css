@@ -297,6 +297,10 @@
 .md-social__link:hover {
   color: var(--md-typeset-a-color) !important;
 }
+/* Footer copyright styling */
+.md-copyright {
+  color: var(--md-footer-fg-color--light);
+}
 
 
 
