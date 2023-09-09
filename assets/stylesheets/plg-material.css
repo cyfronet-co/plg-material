@@ -588,29 +588,23 @@
     margin-top: -.1rem;
     align-self: start;
   }
-  /* Add left-highlight to whole most-general active nav category */
-  .md-nav.md-nav--primary > ul .md-nav__item--active {
-    position: relative;
-  }
-  .md-nav.md-nav--primary > ul > li.md-nav__item--active:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -4px;
-    width: 8px;
-    height: 100%;
-    border-radius: 4px;
-    background-color: var(--plg-nav-active-color);
-  }
   /* Active nav-items styling */
   .md-nav.md-nav--primary > ul .md-nav__item--active > label, /* nested items */
   .md-nav.md-nav--primary > ul > .md-nav__item--active > a /* not nested items */
   {
     color: var(--plg-nav-active-color);
   }
-  /* Add background to not nested items */
-  .md-sidebar--primary ul ul .md-nav__link--active {
+  .md-nav.md-nav--primary a.md-nav__link--active /* active link */
+  {
+    color: var(--plg-nav-active-color) !important;
     background-color: var(--plg-nav-current-color);
+  }
+  /* Styling for navigation-indexes title */
+  .md-nav__link.md-nav__container a {
+    margin-top: 0px;
+  }
+  .md-nav__link.md-nav__container label {
+    display: none;
   }
   /* Replace nav title with margin */
   .md-sidebar--primary .md-nav__title {

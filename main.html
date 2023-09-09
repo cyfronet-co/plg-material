@@ -4,6 +4,35 @@
 
 
 
+{% block extrahead %}
+
+  {{ super() }}
+
+  {% set default_nav_level = 1 if "navigation.indexes" in config.theme.features else 0 %}
+  <style>
+    @media (min-width: 1220px) {
+      {# Showing decorative left-highlight in navigation #}
+      nav[data-md-level="{{default_nav_level}}"] > ul > li.md-nav__item--active {
+        position: relative;
+      }
+      nav[data-md-level="{{default_nav_level}}"] > ul > li.md-nav__item--active:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -4px;
+        width: 8px;
+        height: 100%;
+        border-radius: 4px;
+        background-color: var(--plg-nav-active-color);
+      }
+    }
+  </style>
+
+{% endblock %}
+
+
+
+
 {% block site_nav %}
 
   {{ super() }}
