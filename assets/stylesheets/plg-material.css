@@ -80,6 +80,8 @@
   --plg-nav-current-color:            var(--black--60);
   --plg-toc-active-color:             var(--blue-600);
   --plg-top-button-bg-color:          var(--slate-100);
+
+  --plg-financing-bg-color:           inherit;
 }
 
 /* Dark-mode scheme */
@@ -125,6 +127,8 @@
   --plg-nav-current-color:            var(--black--60);
   --plg-toc-active-color:             var(--blue-400);
   --plg-top-button-bg-color:          var(--slate-800);
+
+  --plg-financing-bg-color:           var(--white);
 }
 
 
@@ -338,11 +342,14 @@
   background-color: inherit;
 }
 .md-footer-meta__inner {
+  flex-direction: column;
   justify-content: center;
 }
 /* Footer-socials styling */
 .md-social {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 16px;
 }
 .md-social__link {
@@ -358,7 +365,32 @@
 }
 /* Footer copyright styling */
 .md-copyright {
+  width: auto;
+  text-align: center;
   color: var(--md-footer-fg-color--light);
+}
+
+
+
+
+/* Financings section */
+.plg-financings {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 8px 16px;
+}
+.plg-financing {
+  margin: 0 auto;
+  background-color: var(--plg-financing-bg-color);
+  border-radius: 8px;
+}
+.plg-financing svg {
+  height: 80px;
+}
+.plg-financing > *:nth-child(even) {
+  display: none;
 }
 
 
@@ -484,7 +516,26 @@
 
   /* Change footer justification */
   .md-footer-meta__inner {
+    flex-direction: row;
     justify-content: space-between;
+  }
+  .md-copyright {
+    text-align: left;
+  }
+
+
+
+
+  /* Financings section */
+  .plg-financings {
+    flex-direction: row;
+  }
+  .plg-financing > *:nth-child(odd) {
+    display: none;
+  }
+  .plg-financing > *:nth-child(odd):only-child,
+  .plg-financing > *:nth-child(even) {
+    display: block;
   }
 }
 

@@ -1,0 +1,16 @@
+<section class="plg-financings">
+  {% for financing in config.extra.financings %}
+
+    {% set lang = i18n_page_locale if i18n_page_locale else config.theme.language %}
+    {% set reversed = financing.reverse %}
+
+    <div class="plg-financing">
+      {% include "assets/images/financings/" ~ financing.icon ~ "-" ~ lang ~ ".svg" %}
+
+      {% if reversed %}
+        {% include "assets/images/financings/" ~ financing.icon ~ "-reverse-" ~ lang ~ ".svg" %}
+      {% endif %}
+    </div>
+
+  {% endfor %}
+</section>
