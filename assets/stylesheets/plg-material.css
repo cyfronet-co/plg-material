@@ -1,8 +1,11 @@
-/* Auxiliary variables for both light & dark modes */
-[data-md-color-scheme="plg-material-light"],
-[data-md-color-scheme="plg-material-dark"] {
-  --plg-nav-size:    12.1rem;
-  --plg-header-size:    3rem;
+/* Auxiliary variables */
+:root {
+  /* Customizable */
+  --plg-nav-size:         12.1rem;
+  --plg-header-size:      3rem;
+
+  /* Rather constant */
+  --plg-body-nav-offset:  var(--plg-nav-size);
 
   --white:          #FFFFFF;
   --black:          #000000;
@@ -321,6 +324,7 @@
 }
 /* Scroll-to-top button */
 .md-top.md-icon {
+  margin-left: calc((100% - var(--plg-body-nav-offset)) / 2);
   background-color: var(--plg-top-button-bg-color);
   color: inherit;
 }
@@ -633,7 +637,7 @@
 
 
   /* Shift content when navigation is fixed */
-  .md-main, .md-footer, .md-header, .md-tabs {
-    padding-left: var(--plg-nav-size);
+  body {
+    padding-left: var(--plg-body-nav-offset);
   }
 }

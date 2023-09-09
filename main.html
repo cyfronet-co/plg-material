@@ -1,0 +1,20 @@
+
+{% extends "base.html" %}
+
+
+
+
+{% block site_nav %}
+
+  {{ super() }}
+
+  {# Remove content offset when navigation is hidden #}
+  {% if page.meta and page.meta.hide and "navigation" in page.meta.hide %}
+    <style>
+      body {
+        --plg-body-nav-offset: 0rem;
+      }
+    </style>
+  {% endif %}
+
+{% endblock %}
