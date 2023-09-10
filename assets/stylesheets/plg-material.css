@@ -600,8 +600,22 @@
     background-color: var(--plg-nav-current-color);
   }
   /* Styling for navigation-indexes title */
+  .md-nav__link.md-nav__container {
+    padding: 0 !important;
+    margin-top: 0 !important;
+    background-color: var(--plg-nav-title-bg-color) !important;
+    border-radius: 0 !important;
+  }
   .md-nav__link.md-nav__container a {
+    padding: calc(var(--plg-header-size) + 12px) 12px 12px 28px !important;
+    padding-left: 12px;
     margin-top: 0px;
+    background-color: inherit !important;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .md-nav__link.md-nav__container a:after {
+    display: none;
   }
   .md-nav__link.md-nav__container label {
     display: none;
