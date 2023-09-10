@@ -25,6 +25,11 @@
         border-radius: 4px;
         background-color: var(--plg-nav-active-color);
       }
+
+      {# Decrease font-weight of nested items in navigation #}
+      nav[data-md-level="{{default_nav_level + 1}}"] .md-nav__link {
+        font-weight: 400 !important
+      }
     }
   </style>
 
