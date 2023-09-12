@@ -3,6 +3,7 @@
   /* Customizable */
   --plg-nav-size:         12.1rem;
   --plg-header-size:      3rem;
+  --plg-tabs-size:        2.5rem;
 
   /* Rather constant */
   --plg-body-nav-offset:  var(--plg-nav-size);
@@ -247,6 +248,18 @@
 }
 .md-search__form input::placeholder {
   color: var(--plg-typeset-search-color);
+}
+/* Navigation tabs styling */
+.md-tabs {
+  height: var(--plg-tabs-size);
+}
+.md-tabs__item {
+  display: flex;
+  align-items: center;
+}
+.md-tabs__link {
+  margin: 0;
+  font-size: 16px;
 }
 
 
@@ -607,12 +620,15 @@
     border-radius: 0 !important;
   }
   .md-nav__link.md-nav__container a {
-    padding: calc(var(--plg-header-size) + 12px) 12px 12px 28px !important;
-    padding-left: 12px;
+    --tmp-padding-bottom: 12px;
+    --tmp-line-height: 24px;
+
+    padding: 0 12px var(--tmp-padding-bottom) 28px !important;
+    padding-top: calc(var(--plg-header-size) + var(--plg-tabs-size) - var(--tmp-line-height) - var(--tmp-padding-bottom)) !important;
     margin-top: 0px;
     background-color: inherit !important;
     font-size: 18px;
-    line-height: 24px;
+    line-height: var(--tmp-line-height);
   }
   .md-nav__link.md-nav__container a:after {
     display: none;
