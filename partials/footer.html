@@ -1,4 +1,7 @@
+{# Footer #}
 <footer class="md-footer">
+
+  {# Link to previous and/or next page #}
   {% if "navigation.footer" in features %}
     {% if page.previous_page or page.next_page %}
       {% if page.meta and page.meta.hide %}
@@ -10,6 +13,7 @@
         {{ hidden }}
       >
 
+        {# Link to previous page #}
         {% if page.previous_page %}
           {% set direction = lang.t("footer.previous") %}
           <a
@@ -33,6 +37,7 @@
           </a>
         {% endif %}
 
+        {# Link to next page #}
         {% if page.next_page %}
           {% set direction = lang.t("footer.next") %}
           <a
@@ -59,17 +64,29 @@
     {% endif %}
   {% endif %}
 
+  {# Further information #}
   <div class="md-footer-meta md-grid md-typeset">
     <div class="md-footer-meta__inner">
       {% include "partials/copyright.html" %}
 
+      {# Social links #}
       {% if config.extra.social %}
         {% include "partials/social.html" %}
       {% endif %}
     </div>
 
+    {# Financings #}
     {% if config.extra.financings %}
-      {% include "partials/financing.html" %}
+      {% include "partials/custom/plg-financings.html" %}
     {% endif %}
   </div>
 </footer>
+
+{#
+  mkdocs-material version: 
+    9.3.1
+  changes:
+    - line 68: added .md-grid CSS class
+    - line 69: removed .md-grid CSS class
+    - lines 78-81: added financings to footer
+#}

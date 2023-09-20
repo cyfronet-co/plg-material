@@ -1,10 +1,4 @@
-{#
-  mkdocs-material version: 
-    9.3.1
-  changes:
-    1. wrapped the partial in if-statement to hide it with "revision_date" option in page.meta.hide
-#}
-
+{# Source file information #}
 {% if not "revision_date" in page.meta.hide %} 
   <hr />
   <div class="md-source-file">
@@ -28,3 +22,10 @@
     </small>
   </div>
 {% endif %}
+
+{#
+  mkdocs-material version: 
+    9.3.1
+  changes:
+    - lines 2 & 24: added if-statement to hide it with "revision_date" option in page.meta.hide
+#}
