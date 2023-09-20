@@ -1,0 +1,7 @@
+/* Wrapper class to display figures in responsive layout */
+.plg-figure-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+}

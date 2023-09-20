@@ -1,0 +1,15 @@
+/* Header logo separator, placed between the logo and the header-title */
+.md-header .md-header__button.md-logo {
+  position: relative;
+}
+.md-header .md-header__button.md-logo:after {
+  content: '';
+  width: 1px;
+  height: 3em;
+  background-color: currentColor;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -8px;
+  bottom: 0;
+}
