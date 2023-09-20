@@ -337,7 +337,6 @@
 }
 /* Scroll-to-top button */
 .md-top.md-icon {
-  margin-left: calc((100% - var(--plg-body-nav-offset)) / 2);
   background-color: var(--plg-top-button-bg-color);
   color: inherit;
 }
@@ -655,6 +654,13 @@
   /* Highlight active section in nav-tabs */
   .md-tabs__link.md-tabs__link--active {
     font-weight: 700;
+  }
+
+
+
+
+  .md-top.md-icon {
+    margin-left: calc((100% - var(--plg-body-nav-offset)) / 2);
   }
 
 
