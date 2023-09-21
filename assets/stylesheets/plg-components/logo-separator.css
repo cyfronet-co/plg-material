@@ -2,7 +2,7 @@
 .md-header .md-header__button.md-logo {
   position: relative;
 }
-.md-header .md-header__button.md-logo:after {
+.md-header .md-header__button.md-logo::after {
   content: '';
   width: 1px;
   height: 3em;
