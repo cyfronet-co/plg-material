@@ -611,14 +611,23 @@
     color: var(--plg-nav-active-color) !important;
     background-color: var(--plg-nav-current-color);
   }
-  /* Styling for navigation-indexes title */
-  .md-nav__link.md-nav__container {
+  /* Replace nav title with margin */
+  .md-sidebar--primary .md-nav__title {
+    display: none;
+  }
+  .md-nav.md-nav--primary > ul > .md-nav__item:first-child .md-nav__link {
+    margin-top: var(--plg-header-size) !important;
+  }
+  /* navigation.tabs */
+  .md-sidebar--primary .md-nav--lifted > .md-nav__list > .md-nav__item--active > :is(div, label).md-nav__link {
     padding: 0 !important;
     margin-top: 0 !important;
     background-color: var(--plg-nav-title-bg-color) !important;
     border-radius: 0 !important;
+    color: var(--white);
+    box-shadow: none;
   }
-  .md-nav__link.md-nav__container a {
+  .md-sidebar--primary .md-nav--lifted > .md-nav__list > .md-nav__item--active > :is(div, label).md-nav__link > :is(span, a) {
     --tmp-padding-bottom: 12px;
     --tmp-line-height: 24px;
 
@@ -629,31 +638,21 @@
     font-size: 18px;
     line-height: var(--tmp-line-height);
   }
-  .md-nav__link.md-nav__container a:after {
-    display: none;
+  /* navigation.tabs > highlight active section */
+  .md-tabs__item.md-tabs__item--active {
+    font-weight: 700;
   }
+  /* navigation.indexes */
+  .md-nav__link.md-nav__container {
+    padding: 0;
+    margin: 0;
+  }
+  .md-nav__item--active .md-nav__link.md-nav__container .md-nav__link {
+    color: var(--plg-nav-active-color);
+  }
+  .md-nav__link.md-nav__container a:after,
   .md-nav__link.md-nav__container label {
     display: none;
-  }
-  /* Replace nav title with margin */
-  .md-sidebar--primary .md-nav__title {
-    display: none;
-  }
-  .md-nav.md-nav--primary > ul > .md-nav__item:first-child .md-nav__link {
-    margin-top: var(--plg-header-size) !important;
-  }
-  /* Nav-tabs index label */
-  .md-sidebar--primary .md-nav--lifted > .md-nav__list > .md-nav__item--active > .md-nav__link {
-    padding: 12px 12px 12px 16px;
-    margin-top: var(--plg-header-size);
-    background: none;
-    font-size: 16px;
-    color: var(--plg-nav-active-color);
-    box-shadow: none;
-  }
-  /* Highlight active section in nav-tabs */
-  .md-tabs__link.md-tabs__link--active {
-    font-weight: 700;
   }
 
 

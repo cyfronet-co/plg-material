@@ -8,7 +8,7 @@
 
   {{ super() }}
 
-  {% set default_nav_level = 1 if "navigation.indexes" in config.theme.features else 0 %}
+  {% set default_nav_level = 1 if "navigation.tabs" in config.theme.features else 0 %}
   <style>
     @media (min-width: 1220px) {
       {# Showing decorative left-highlight in navigation #}
