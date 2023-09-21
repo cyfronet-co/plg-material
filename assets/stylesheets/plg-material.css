@@ -624,7 +624,6 @@
     margin-top: 0 !important;
     background-color: var(--plg-nav-title-bg-color) !important;
     border-radius: 0 !important;
-    color: var(--white);
     box-shadow: none;
   }
   .md-sidebar--primary .md-nav--lifted > .md-nav__list > .md-nav__item--active > :is(div, label).md-nav__link > :is(span, a) {
@@ -636,7 +635,11 @@
     margin-top: 0px;
     background-color: inherit !important;
     font-size: 18px;
+    color: var(--white);
     line-height: var(--tmp-line-height);
+  }
+  .md-sidebar--primary .md-nav--lifted > .md-nav__list > .md-nav__item--active > :is(div, label).md-nav__link > :is(span, a):hover {
+    color: var(--plg-nav-hover-color);
   }
   /* navigation.tabs > highlight active section */
   .md-tabs__item.md-tabs__item--active {
