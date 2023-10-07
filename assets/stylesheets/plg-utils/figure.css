@@ -1,0 +1,92 @@
+/* General figure styling */
+.md-typeset figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: max-content;
+}
+.md-typeset figure img {
+  width: 100%;
+}
+
+
+
+
+/* 
+  Handle elements inside the figure
+*/
+
+/* Handle figure size by width (default) */
+.md-typeset figure > *,
+.md-typeset figure.w-md > * {
+  --plg-figure-max-width: 500px;
+  --plg-figure-width-multiplier: 1;
+  width: 100%;
+  min-width: 328px;
+  max-width: calc(var(--plg-figure-max-width) * var(--plg-figure-width-multiplier)); 
+}
+.md-typeset figure.w-sm > * {
+  --plg-figure-max-width: 400px;
+}
+.md-typeset figure.w-lg > * {
+  --plg-figure-max-width: 600px;
+}
+/* Handle figure size by height */
+.md-typeset :is(figure.h-sm, figure.h-md, figure.h-lg) > * {
+  width: auto;
+  min-width: 0px;
+  max-width: none;
+}
+.md-typeset figure.h-sm img {
+  height: 225px;
+}
+.md-typeset figure.h-md img {
+  height: 275px;
+}
+.md-typeset figure.h-lg img {
+  height: 328px;
+}
+
+/* Figcaption styling */
+.md-typeset figure > figcaption,
+.md-typeset figure > figcaption.normal {
+  --plg-figure-width-multiplier: 1;
+}
+.md-typeset figure > figcaption.compact {
+  --plg-figure-width-multiplier: 0.75;
+}
+.md-typeset figure > figcaption.expand {
+  --plg-figure-width-multiplier: 1.25;
+}
+
+
+
+
+/* 
+  UTILITY CLASSES
+*/
+
+/* Wrapper class to display multiple figures in responsive layout */
+.plg-figure-group {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+/* Floating figures */
+@media (min-width: 640px) {
+  .md-typeset :is(figure.left, figure.right) {
+    margin-block: 0;
+  }
+  .md-typeset figure.left {
+    float: left;
+    margin-right: 16px;
+  }
+  .md-typeset figure.right {
+    float: right;
+    margin-left: 16px;
+  }
+}
