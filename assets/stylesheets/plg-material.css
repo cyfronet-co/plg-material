@@ -187,6 +187,10 @@
 .md-typeset .headerlink:focus, .md-typeset .headerlink:hover {
   color: var(--md-typeset-a-hover-color);
 }
+/* Hide headers linkers */
+.off-permalink > a.headerlink {
+  display: none !important;
+}
 /* Buttons */
 .md-typeset .md-button {
   border: var(--plg-primary-border);
