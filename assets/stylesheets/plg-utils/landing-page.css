@@ -1,0 +1,35 @@
+:root {
+    --plg-lp-section-padding:                   80px 16px;
+}
+
+
+
+
+/* Set up landing page environment */
+.plg-lp > .md-main__inner {
+    margin: 0;
+}
+.plg-lp > .md-main__inner.md-grid {
+    max-width: none;
+}
+.plg-lp > .md-main__inner > .md-content > .md-content__inner {
+    padding: 0;
+    margin: 0;
+}
+.plg-lp > .md-main__inner > .md-content > .md-content__inner::before {
+    display: none;
+}
+
+
+
+
+/* General styling */
+.plg-lp section {
+    padding: var(--plg-lp-section-padding);
+    overflow: hidden;
+}
+/* Do not force headers color */
+.plg-lp :is(h1, h2, h3, h4, h5, h6, p) {
+    color: inherit;
+    margin: 0;
+}
