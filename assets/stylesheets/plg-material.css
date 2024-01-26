@@ -254,6 +254,9 @@
   color: var(--plg-typeset-search-color);
 }
 /* Navigation tabs styling */
+.md-nav--primary .md-nav__list {
+  padding-left: 0 !important;
+}
 .md-tabs {
   height: var(--plg-tabs-size);
 }
@@ -274,7 +277,10 @@
   background-color: var(--plg-primary-bg-color);
   color: var(--md-primary-bg-color);
 }
-/* Toc passed-item styling */
+/* Toc styling */
+.md-nav--secondary .md-nav__list {
+  padding-left: 0 !important;
+}
 .md-nav__link--passed {
   color: var(--plg-typeset-passed-color) !important;
 }
