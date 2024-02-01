@@ -31,6 +31,7 @@
   --blue-400:       #60A5FA;  
   --blue-600:       #2563EB;
   --blue-600--25:   #2563eb42;
+  --blue-800:       #1e40af;
   --red-100:        #fee2e2;
   --red-400:        #f87171;
   --red-800:        #991b1b;
@@ -215,6 +216,41 @@
 .md-nav__source {
   background-color: var(--plg-nav-source-bg-color);
   color: white;
+}
+
+
+
+
+/* General consent-bar styling */
+[data-md-component="consent"] > * {
+  left: 0;
+}
+[data-md-component="consent"] > aside {
+  background-color: var(--plg-primary-bg-color);
+}
+[data-md-component="consent"] :is(h4, p) {
+  color: var(--md-primary-bg-color);
+}
+/* Consent-bar buttons wrapper styling */
+[data-md-component="consent"] .md-consent__controls {
+  display: flex;
+  justify-content: center;
+}
+/* Consent-bar buttons styling */
+[data-md-component="consent"] .md-consent__controls > button.md-button.md-button--primary {
+  width: auto !important;
+  padding: 16px 24px;
+  background-color: var(--blue-600);
+  border: none;
+  border-radius: 9999px;
+  color: var(--white);
+  text-align: center;
+  font-weight: 700;
+  transition: background-color 300px;
+}
+[data-md-component="consent"] .md-consent__controls > button.md-button.md-button--primary:focus,
+[data-md-component="consent"] .md-consent__controls > button.md-button.md-button--primary:hover {
+  background-color: var(--blue-800);
 }
 
 
@@ -477,6 +513,14 @@
 
 
 @media screen and (min-width: 60em) {
+  /* Consent-bar buttons wrapper styling */
+  [data-md-component="consent"] .md-consent__controls {
+    justify-content: end;
+  }
+
+
+
+
   /* Toc styling */
   .md-nav--secondary .md-nav__title {
     padding: 0 0.8rem 0.4rem 0.8rem;
@@ -680,6 +724,16 @@
 
   /* Shift content when navigation is fixed */
   body {
+    padding-left: var(--plg-body-nav-offset);
+  }
+}
+
+
+
+
+@media (min-width: 2250px) {
+  /* Align consent-bar with content on ultra-wide resolutions */
+  [data-md-component="consent"] > aside {
     padding-left: var(--plg-body-nav-offset);
   }
 }
